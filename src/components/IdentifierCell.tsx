@@ -14,14 +14,14 @@ export function IdentifierCell({ result, large = false }: { result: IdentifierRe
           {result.normalizedInput || '—'}
         </span>
         {result.kind !== 'UNKNOWN' && (
-          <span className="shrink-0 rounded border border-slate-200 px-1.5 text-[10px] font-semibold tracking-wider text-slate-500">
+          <span className="shrink-0 rounded border border-surface-200 px-1.5 text-[10px] font-semibold tracking-wider text-body">
             {kindLabel(result)}
           </span>
         )}
       </div>
       {showOriginal && (
-        <div className="mt-0.5 text-xs text-slate-500">
-          entered as <span className="font-mono break-all whitespace-pre-wrap text-slate-600">{result.originalInput.trim()}</span>
+        <div className="mt-0.5 text-xs text-body">
+          entered as <span className="font-mono break-all whitespace-pre-wrap text-body">{result.originalInput.trim()}</span>
         </div>
       )}
     </div>

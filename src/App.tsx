@@ -31,7 +31,7 @@ export default function App() {
       <main className="mx-auto w-full max-w-6xl flex-1 px-4 pt-8 sm:px-6 sm:pt-12">
         <div className="max-w-2xl">
           <h1 className="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">Check CINs and LLPINs</h1>
-          <p className="mt-2 text-[15px] leading-relaxed text-slate-600">
+          <p className="mt-2 text-[15px] leading-relaxed text-body">
             Paste company or LLP identification numbers to see whether each one is correctly formatted and what it
             encodes: listing status, state, year of incorporation and company type.
           </p>

@@ -6,7 +6,7 @@ const toneStyles: Record<Tone, { className: string; icon: IconName }> = {
   valid: { className: 'bg-emerald-50 text-emerald-800 ring-emerald-600/20', icon: 'check' },
   review: { className: 'bg-amber-50 text-amber-900 ring-amber-600/25', icon: 'alert' },
   invalid: { className: 'bg-rose-50 text-rose-800 ring-rose-600/20', icon: 'xCircle' },
-  unknown: { className: 'bg-slate-100 text-slate-700 ring-slate-500/20', icon: 'help' },
+  unknown: { className: 'bg-surface-100 text-body ring-slate-500/20', icon: 'help' },
 };
 
 export function StatusBadge({ result }: { result: IdentifierResult }) {

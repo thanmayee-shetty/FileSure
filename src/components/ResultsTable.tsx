@@ -30,7 +30,7 @@ function CinCells({ result }: { result: CinResult }) {
       <td className="tabular px-3 py-3 align-top text-sm">{d.yearOfIncorporation ?? <Dash />}</td>
       <td className="px-3 py-3 align-top text-sm">
         {d.companyType ?? <Dash />}
-        {d.companyTypeNote && <span className="block text-xs text-slate-500">Observed code, pending confirmation</span>}
+        {d.companyTypeNote && <span className="block text-xs text-body">Observed code, pending confirmation</span>}
       </td>
     </>
   );
@@ -44,7 +44,7 @@ function Row({ row }: { row: ResultRow }) {
 
   return (
     <Fragment>
-      <tr className={`border-t border-slate-100 ${open ? 'bg-slate-50/70' : 'hover:bg-slate-50/60'}`} data-testid="result-row">
+      <tr className={`border-t border-surface-100 ${open ? 'bg-surface-50' : 'hover:bg-surface-50/60'}`} data-testid="result-row">
         <td className="tabular px-3 py-3 align-top text-xs text-slate-400">{lineNumber}</td>
         <td className="px-3 py-3 align-top">
           <IdentifierCell result={result} />
@@ -59,7 +59,7 @@ function Row({ row }: { row: ResultRow }) {
         ) : result.kind === 'CIN' ? (
           <CinCells result={result} />
         ) : (
-          <td colSpan={4} className="px-3 py-3 align-top text-sm text-slate-500">
+          <td colSpan={4} className="px-3 py-3 align-top text-sm text-body">
             {NOT_ENCODED}: listing, state, year and company type
           </td>
         )}
@@ -70,7 +70,7 @@ function Row({ row }: { row: ResultRow }) {
             aria-expanded={open}
             aria-controls={detailsId}
             aria-label={`${open ? 'Hide' : 'Show'} details for line ${lineNumber}`}
-            className="inline-flex items-center gap-1 rounded-md px-2 py-1 text-xs font-medium text-brand-700 hover:bg-brand-50"
+            className="inline-flex items-center gap-1 rounded-md px-2 py-1 text-xs font-medium text-ink hover:bg-brand-50"
           >
             Details
             <Icon name="chevronDown" className={`size-3.5 transition-transform ${open ? 'rotate-180' : ''}`} />
@@ -78,7 +78,7 @@ function Row({ row }: { row: ResultRow }) {
         </td>
       </tr>
       {open && (
-        <tr id={detailsId} className="bg-slate-50/70">
+        <tr id={detailsId} className="bg-surface-50">
           <td />
           <td colSpan={7} className="px-3 pt-1 pb-5">
             <ResultDetails result={result} showIssues={!invalid} />
@@ -95,7 +95,7 @@ export function ResultsTable({ rows }: { rows: ResultRow[] }) {
       <table className="w-full min-w-[56rem] border-collapse text-left">
         <caption className="sr-only">Results in input order</caption>
         <thead className="sticky top-0 z-10 bg-white/95 backdrop-blur">
-          <tr className="text-xs font-medium text-slate-500 shadow-[inset_0_-1px_0_var(--color-slate-200)]">
+          <tr className="text-xs font-medium text-body shadow-[inset_0_-1px_0_var(--color-surface-200)]">
             <th scope="col" className="w-12 px-3 py-2.5 font-medium">
               Line
             </th>

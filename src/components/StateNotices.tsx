@@ -8,13 +8,13 @@ export function Onboarding() {
   return (
     <section
       aria-labelledby="how-to-read"
-      className="rounded-2xl border border-dashed border-slate-300 bg-white/60 p-5 sm:p-6"
+      className="rounded-2xl border border-dashed border-surface-300 bg-white p-5 sm:p-6"
       data-testid="onboarding"
     >
       <h2 id="how-to-read" className="text-sm font-semibold text-ink">
         What a CIN tells you
       </h2>
-      <p className="mt-1 text-sm text-slate-600">
+      <p className="mt-1 text-sm text-body">
         A 21-character CIN encodes six facts about how a company was registered. Each result breaks it down like this.
       </p>
       <div className="mt-4">
@@ -31,11 +31,11 @@ export function Onboarding() {
           }}
         />
       </div>
-      <div className="mt-5 flex gap-3 border-t border-slate-200 pt-4">
-        <span className="h-fit rounded-md border border-slate-200 bg-white px-2 py-1 font-mono text-sm font-medium tracking-wider">
+      <div className="mt-5 flex gap-3 border-t border-surface-200 pt-4">
+        <span className="h-fit rounded-md border border-surface-200 bg-white px-2 py-1 font-mono text-sm font-medium tracking-wider">
           {LLPIN_EXAMPLE}
         </span>
-        <p className="text-sm text-slate-600">
+        <p className="text-sm text-body">
           An <span className="font-medium text-ink">LLPIN</span> identifies a limited liability partnership. It
           does not encode listing, state, year or type, so only its format can be checked.
         </p>
@@ -47,12 +47,12 @@ export function Onboarding() {
 /** Shown when "Check" is pressed with nothing but blank lines. Neutral, not an error. */
 export function EmptySubmission() {
   return (
-    <div role="status" className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6" data-testid="empty-state">
+    <div role="status" className="rounded-2xl border border-surface-200 bg-white p-5 sm:p-6" data-testid="empty-state">
       <div className="flex gap-3">
         <Icon name="info" className="mt-0.5 size-5 shrink-0 text-brand-600" />
         <div>
           <h2 className="text-sm font-semibold text-ink">Paste identifiers to check</h2>
-          <p className="mt-1 text-sm text-slate-600">
+          <p className="mt-1 text-sm text-body">
             Enter one CIN or LLPIN per line, for example{' '}
             <span className="font-mono text-ink">{CIN_EXAMPLE}</span> or{' '}
             <span className="font-mono text-ink">{LLPIN_EXAMPLE}</span>.
@@ -85,11 +85,11 @@ export function StaleNotice({ onRecheck }: { onRecheck: () => void }) {
   return (
     <div
       role="status"
-      className="flex flex-col gap-2 rounded-lg border border-brand-100 bg-brand-50 px-4 py-2.5 text-sm text-brand-900 sm:flex-row sm:items-center sm:justify-between"
+      className="flex flex-col gap-2 rounded-lg border border-peach-400 bg-peach-200 px-4 py-2.5 text-sm text-ink sm:flex-row sm:items-center sm:justify-between"
       data-testid="stale-notice"
     >
       <span>The list has changed since these results were produced.</span>
-      <button type="button" onClick={onRecheck} className="font-semibold text-brand-700 underline underline-offset-2">
+      <button type="button" onClick={onRecheck} className="font-semibold text-ink underline underline-offset-2">
         Check again
       </button>
     </div>

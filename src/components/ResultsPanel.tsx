@@ -34,18 +34,18 @@ export function ResultsPanel({ summary, rows, filters, onFiltersChange, onDownlo
       </p>
 
       {rows.length === 0 ? (
-        <div className="rounded-2xl border border-slate-200 bg-white px-5 py-10 text-center" data-testid="no-matches">
+        <div className="rounded-2xl border border-surface-200 bg-white px-5 py-10 text-center" data-testid="no-matches">
           <p className="text-sm font-medium text-ink">No results match these filters.</p>
           <button
             type="button"
             onClick={() => onFiltersChange(DEFAULT_FILTERS)}
-            className="mt-2 text-sm font-medium text-brand-700 underline underline-offset-2"
+            className="mt-2 text-sm font-medium text-ink underline underline-offset-2"
           >
             Show all results
           </button>
         </div>
       ) : isDesktop ? (
-        <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xs">
+        <div className="overflow-hidden rounded-2xl border border-surface-200 bg-white shadow-xs">
           <ResultsTable rows={rows} />
         </div>
       ) : (
@@ -53,7 +53,7 @@ export function ResultsPanel({ summary, rows, filters, onFiltersChange, onDownlo
       )}
 
       {rows.length > 0 && rows.length < summary.total && (
-        <p className="text-xs text-slate-500">
+        <p className="text-xs text-body">
           Showing {rows.length} of {summary.total}. Results stay in the order you pasted them.
         </p>
       )}

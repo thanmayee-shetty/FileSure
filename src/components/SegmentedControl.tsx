@@ -18,7 +18,7 @@ export function SegmentedControl<T extends string>({ label, value, options, onCh
       role="group"
       aria-label={label}
       data-testid={testId}
-      className="inline-flex max-w-full overflow-x-auto rounded-lg bg-slate-100 p-0.5"
+      className="inline-flex max-w-full overflow-x-auto rounded-lg bg-surface-100 p-0.5"
     >
       {options.map((opt) => {
         const active = opt.value === value;
@@ -29,12 +29,12 @@ export function SegmentedControl<T extends string>({ label, value, options, onCh
             aria-pressed={active}
             onClick={() => onChange(opt.value)}
             className={`inline-flex min-h-8 shrink-0 items-center gap-1.5 rounded-md px-3 text-sm whitespace-nowrap transition-colors ${
-              active ? 'bg-white font-medium text-ink shadow-xs ring-1 ring-slate-200' : 'text-slate-600 hover:text-ink'
+              active ? 'bg-white font-medium text-ink shadow-xs ring-1 ring-surface-200' : 'text-body hover:text-ink'
             }`}
           >
             {opt.label}
             {opt.count !== undefined && (
-              <span className={`tabular text-xs ${active ? 'text-slate-500' : 'text-slate-400'}`}>{opt.count}</span>
+              <span className="tabular text-xs text-body">{opt.count}</span>
             )}
           </button>
         );

@@ -31,7 +31,7 @@ export function CinSegments({ value, issues = [], captions, size = 'sm' }: CinSe
         const part = value.slice(seg.start, seg.start + seg.length);
         const issue = issues.find((i) => i.field === seg.field);
         const tone = !issue
-          ? 'border-slate-200 bg-white text-ink'
+          ? 'border-surface-200 bg-white text-ink'
           : issue.severity === 'advisory'
             ? 'border-amber-300 bg-amber-50 text-amber-950'
             : 'border-rose-300 bg-rose-50 text-rose-900';
@@ -44,11 +44,11 @@ export function CinSegments({ value, issues = [], captions, size = 'sm' }: CinSe
             >
               {part}
             </span>
-            <span className={`mt-1 font-medium uppercase tracking-wide text-slate-500 ${big ? 'text-[11px]' : 'text-[10px]'}`}>
+            <span className={`mt-1 font-medium uppercase tracking-wide text-body ${big ? 'text-[11px]' : 'text-[10px]'}`}>
               {SEGMENT_LABELS[seg.field]}
             </span>
             {captions?.[seg.field] && (
-              <span className="max-w-[9rem] text-xs leading-tight text-slate-600">{captions[seg.field]}</span>
+              <span className="max-w-[9rem] text-xs leading-tight text-body">{captions[seg.field]}</span>
             )}
           </li>
         );

@@ -23,13 +23,13 @@ export function IssueList({ issues, compact = false }: { issues: ValidationIssue
               <span className={issue.severity === 'advisory' ? 'text-amber-950' : 'text-rose-950'}>
                 {issue.message}
               </span>
-              {issue.note && <span className="mt-0.5 block text-xs text-slate-500">{issue.note}</span>}
+              {issue.note && <span className="mt-0.5 block text-xs text-body">{issue.note}</span>}
             </span>
           </li>
         ))}
       </ul>
       {hints.length > 0 && (
-        <ul className="ml-6 list-disc space-y-1 text-sm leading-snug text-slate-600 marker:text-slate-300">
+        <ul className="ml-6 list-disc space-y-1 text-sm leading-snug text-body marker:text-surface-300">
           {hints.map((hint) => (
             <li key={hint.code}>{hint.message}</li>
           ))}

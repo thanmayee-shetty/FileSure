@@ -47,13 +47,13 @@ export function ResultsToolbar({ summary, filters, onChange, onDownload }: Resul
             onChange={(e) => onChange({ ...filters, query: e.target.value })}
             placeholder="Search identifier or error"
             data-testid="results-search"
-            className="h-9 w-full rounded-lg border border-slate-300 bg-white pr-3 pl-8 text-sm placeholder:text-slate-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 focus:outline-none"
+            className="h-9 w-full rounded-lg border border-surface-300 bg-white pr-3 pl-8 text-sm placeholder:text-slate-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 focus:outline-none"
           />
         </label>
         <button
           type="button"
           onClick={onDownload}
-          className="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg border border-slate-300 bg-white px-3 text-sm font-medium text-slate-700 hover:bg-slate-50"
+          className="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg border border-surface-300 bg-white px-3 text-sm font-medium text-body hover:bg-surface-50"
           data-testid="download-csv"
         >
           <Icon name="download" className="size-4" />

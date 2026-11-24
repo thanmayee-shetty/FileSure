@@ -7,7 +7,7 @@ function Stat({ value, label, tone }: { value: number; label: string; tone?: Sta
   return (
     <span className="whitespace-nowrap">
       <span className={`tabular text-lg font-semibold ${color}`}>{value}</span>{' '}
-      <span className="text-sm text-slate-600">{label}</span>
+      <span className="text-sm text-body">{label}</span>
     </span>
   );
 }
@@ -21,7 +21,7 @@ export function ResultsSummary({ summary }: { summary: Summary }) {
         <Stat value={summary.total} label={plural(summary.total, 'identifier')} />
         <Stat value={summary.validFormat} label="valid format" tone="valid" />
         <Stat value={summary.invalidFormat} label="invalid format" tone="invalid" />
-        <span className="hidden h-4 w-px self-center bg-slate-200 sm:block" aria-hidden="true" />
+        <span className="hidden h-4 w-px self-center bg-surface-200 sm:block" aria-hidden="true" />
         <Stat value={summary.cin} label="CIN" />
         <Stat value={summary.llp} label="LLP" />
         {summary.unknown > 0 && <Stat value={summary.unknown} label="unknown" />}

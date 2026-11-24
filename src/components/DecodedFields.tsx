@@ -3,15 +3,15 @@ import { NOT_ENCODED } from '../lib/display';
 import type { CinResult, IdentifierResult, LlpinResult } from '../lib/types';
 
 function Muted({ children }: { children: ReactNode }) {
-  return <span className="text-slate-500">{children}</span>;
+  return <span className="text-body">{children}</span>;
 }
 
 function Code({ children }: { children: ReactNode }) {
-  return <span className="ml-1.5 rounded bg-slate-100 px-1.5 py-px font-mono text-xs text-slate-600">{children}</span>;
+  return <span className="ml-1.5 rounded bg-surface-100 px-1.5 py-px font-mono text-xs text-body">{children}</span>;
 }
 
 function Note({ children }: { children: ReactNode }) {
-  return <span className="mt-0.5 block text-xs leading-snug text-slate-500">{children}</span>;
+  return <span className="mt-0.5 block text-xs leading-snug text-body">{children}</span>;
 }
 
 interface Field {
@@ -93,7 +93,7 @@ export function DecodedFields({ result }: { result: IdentifierResult }) {
     <dl className="grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-2 lg:grid-cols-3" data-testid="decoded-fields">
       {fields.map((f) => (
         <div key={f.label}>
-          <dt className="text-xs font-medium text-slate-500">{f.label}</dt>
+          <dt className="text-xs font-medium text-body">{f.label}</dt>
           <dd className="mt-0.5 text-sm text-ink">{f.value}</dd>
         </div>
       ))}
