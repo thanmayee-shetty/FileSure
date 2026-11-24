@@ -1,0 +1,363 @@
+{
+  "_metadata": {
+    "title": "FileSure CIN reference mappings",
+    "version": "0.1.0",
+    "preparedOn": "2026-11-24",
+    "status": "draft_for_review",
+    "important": [
+      "Mappings are reference data, not proof that a CIN exists.",
+      "An unknown code should produce an unrecognized-component result, not automatically invalidate the CIN's character structure.",
+      "State/territory entries are a conservative baseline and require cross-checking against MCA master data, including historical records.",
+      "Unverified candidates are intentionally kept separate from accepted state mappings."
+    ]
+  },
+  "stateCodes": {
+    "AN": {
+      "name": "Andaman and Nicobar Islands",
+      "kind": "union_territory",
+      "status": "baseline"
+    },
+    "AP": {
+      "name": "Andhra Pradesh",
+      "kind": "state",
+      "status": "baseline"
+    },
+    "AR": {
+      "name": "Arunachal Pradesh",
+      "kind": "state",
+      "status": "baseline"
+    },
+    "AS": {
+      "name": "Assam",
+      "kind": "state",
+      "status": "baseline"
+    },
+    "BR": {
+      "name": "Bihar",
+      "kind": "state",
+      "status": "baseline"
+    },
+    "CH": {
+      "name": "Chandigarh",
+      "kind": "union_territory",
+      "status": "baseline"
+    },
+    "CG": {
+      "name": "Chhattisgarh",
+      "kind": "state",
+      "status": "baseline"
+    },
+    "DD": {
+      "name": "Daman and Diu",
+      "kind": "union_territory",
+      "status": "historical"
+    },
+    "DL": {
+      "name": "Delhi",
+      "kind": "union_territory",
+      "status": "baseline"
+    },
+    "DN": {
+      "name": "Dadra and Nagar Haveli",
+      "kind": "union_territory",
+      "status": "historical"
+    },
+    "GA": {
+      "name": "Goa",
+      "kind": "state",
+      "status": "baseline"
+    },
+    "GJ": {
+      "name": "Gujarat",
+      "kind": "state",
+      "status": "baseline"
+    },
+    "HP": {
+      "name": "Himachal Pradesh",
+      "kind": "state",
+      "status": "baseline"
+    },
+    "HR": {
+      "name": "Haryana",
+      "kind": "state",
+      "status": "baseline"
+    },
+    "JH": {
+      "name": "Jharkhand",
+      "kind": "state",
+      "status": "baseline"
+    },
+    "JK": {
+      "name": "Jammu and Kashmir",
+      "kind": "union_territory",
+      "status": "baseline"
+    },
+    "KA": {
+      "name": "Karnataka",
+      "kind": "state",
+      "status": "baseline"
+    },
+    "KL": {
+      "name": "Kerala",
+      "kind": "state",
+      "status": "baseline"
+    },
+    "LD": {
+      "name": "Lakshadweep",
+      "kind": "union_territory",
+      "status": "baseline"
+    },
+    "MH": {
+      "name": "Maharashtra",
+      "kind": "state",
+      "status": "baseline"
+    },
+    "ML": {
+      "name": "Meghalaya",
+      "kind": "state",
+      "status": "baseline"
+    },
+    "MN": {
+      "name": "Manipur",
+      "kind": "state",
+      "status": "baseline"
+    },
+    "MP": {
+      "name": "Madhya Pradesh",
+      "kind": "state",
+      "status": "baseline"
+    },
+    "MZ": {
+      "name": "Mizoram",
+      "kind": "state",
+      "status": "baseline"
+    },
+    "NL": {
+      "name": "Nagaland",
+      "kind": "state",
+      "status": "baseline"
+    },
+    "OR": {
+      "name": "Odisha",
+      "kind": "state",
+      "status": "historical_or_legacy_name",
+      "displayNote": "The CIN code OR is retained; Odisha was formerly called Orissa."
+    },
+    "PB": {
+      "name": "Punjab",
+      "kind": "state",
+      "status": "baseline"
+    },
+    "PY": {
+      "name": "Puducherry",
+      "kind": "union_territory",
+      "status": "baseline"
+    },
+    "RJ": {
+      "name": "Rajasthan",
+      "kind": "state",
+      "status": "baseline"
+    },
+    "SK": {
+      "name": "Sikkim",
+      "kind": "state",
+      "status": "baseline"
+    },
+    "TG": {
+      "name": "Telangana",
+      "kind": "state",
+      "status": "baseline"
+    },
+    "TN": {
+      "name": "Tamil Nadu",
+      "kind": "state",
+      "status": "baseline"
+    },
+    "TR": {
+      "name": "Tripura",
+      "kind": "state",
+      "status": "baseline"
+    },
+    "UP": {
+      "name": "Uttar Pradesh",
+      "kind": "state",
+      "status": "baseline"
+    },
+    "UT": {
+      "name": "Uttarakhand",
+      "kind": "state",
+      "status": "baseline"
+    },
+    "WB": {
+      "name": "West Bengal",
+      "kind": "state",
+      "status": "baseline"
+    }
+  },
+  "companyTypes": {
+    "GOI": {
+      "label": "Union Government company",
+      "category": "government",
+      "status": "documented",
+      "sourceMeaning": "Union Government company"
+    },
+    "SGC": {
+      "label": "State Government company",
+      "category": "government",
+      "status": "documented",
+      "sourceMeaning": "State Government company"
+    },
+    "PLC": {
+      "label": "Public limited Indian non-government company",
+      "category": "public_limited",
+      "status": "documented",
+      "sourceMeaning": "Public limited Indian Non-government Company"
+    },
+    "PTC": {
+      "label": "Private limited Indian non-government company",
+      "category": "private_limited",
+      "status": "documented",
+      "sourceMeaning": "Private limited Indian Non-government Company"
+    },
+    "FLC": {
+      "label": "Public limited foreign company incorporated in India",
+      "category": "foreign_owned_or_controlled_classification",
+      "status": "documented",
+      "sourceMeaning": "Public limited foreign company incorporated in India",
+      "note": "Do not expand FLC as 'financial leasing company' based on unrelated uses of the acronym."
+    },
+    "FTC": {
+      "label": "Private limited foreign company incorporated in India",
+      "category": "foreign_owned_or_controlled_classification",
+      "status": "documented",
+      "sourceMeaning": "Private limited foreign company incorporated in India"
+    },
+    "ULL": {
+      "label": "Unlimited liability — public",
+      "category": "unlimited_liability",
+      "status": "documented",
+      "sourceMeaning": "Unlimited liabilities Public"
+    },
+    "ULT": {
+      "label": "Unlimited liability — private",
+      "category": "unlimited_liability",
+      "status": "documented",
+      "sourceMeaning": "Unlimited liabilities Private"
+    },
+    "GAP": {
+      "label": "Guarantee and association — public",
+      "category": "guarantee_and_association",
+      "status": "documented",
+      "sourceMeaning": "Guarantee & Association Public"
+    },
+    "GAT": {
+      "label": "Guarantee and association — private",
+      "category": "guarantee_and_association",
+      "status": "documented",
+      "sourceMeaning": "Guarantee & Association Private"
+    },
+    "NPL": {
+      "label": "Section 25 company (historical terminology)",
+      "category": "non_profit_historical",
+      "status": "documented_historical",
+      "sourceMeaning": "Section 25 company",
+      "note": "Section 25 is terminology under the former Companies Act, 1956. The Companies Act, 2013 uses Section 8 for the corresponding not-for-profit company framework. Do not assume every Section 8 company has NPL in its CIN."
+    },
+    "OPC": {
+      "label": "One Person Company",
+      "category": "one_person_company",
+      "status": "observed_in_mca_derived_example",
+      "sourceMeaning": "One Person Company",
+      "note": "OPC appears in a 2026 research paper's example CIN. Treat as an observed code and verify against current MCA master data before making an exhaustive claim."
+    }
+  },
+  "unverifiedStateSegmentCandidates": {
+    "TS": {
+      "reportedMeaning": "Telangana",
+      "status": "not_in_baseline",
+      "note": "Do not silently substitute for TG; verify against MCA CIN records."
+    },
+    "UK": {
+      "reportedMeaning": "Uttarakhand",
+      "status": "not_in_baseline",
+      "note": "Do not silently substitute for UT; verify against MCA CIN records."
+    },
+    "CT": {
+      "reportedMeaning": "Chhattisgarh",
+      "status": "not_in_baseline",
+      "note": "Do not silently substitute for CG; verify against MCA CIN records."
+    },
+    "UW": {
+      "reportedMeaning": "Uttar Pradesh II / Noida ROC association",
+      "status": "unverified_recent_report",
+      "note": "A recent secondary report associates this with a Registrar office, not a state abbreviation. Do not use as a state mapping without direct MCA confirmation."
+    },
+    "PN": {
+      "reportedMeaning": "Pune ROC association in Maharashtra",
+      "status": "unverified_recent_report",
+      "note": "A recent secondary report associates this with a Registrar office. Do not use as a state mapping without direct MCA confirmation."
+    },
+    "MR": {
+      "reportedMeaning": "Mumbai II ROC association in Maharashtra",
+      "status": "unverified_recent_report",
+      "note": "A recent secondary report associates this with a Registrar office. Do not use as a state mapping without direct MCA confirmation."
+    },
+    "DC": {
+      "reportedMeaning": "Delhi II ROC association",
+      "status": "unverified_recent_report",
+      "note": "A recent secondary report associates this with a Registrar office. Do not use as a state mapping without direct MCA confirmation."
+    },
+    "WR": {
+      "reportedMeaning": "Kolkata II ROC association in West Bengal",
+      "status": "unverified_recent_report",
+      "note": "A recent secondary report associates this with a Registrar office. Do not use as a state mapping without direct MCA confirmation."
+    },
+    "ME": {
+      "reportedMeaning": "Nagpur ROC association in Maharashtra",
+      "status": "unverified_recent_report",
+      "note": "A recent secondary report associates this with a Registrar office. Do not use as a state mapping without direct MCA confirmation."
+    },
+    "TZ": {
+      "reportedMeaning": "Coimbatore ROC association in Tamil Nadu",
+      "status": "unverified_recent_report",
+      "note": "A recent secondary report associates this with a Registrar office. Do not use as a state mapping without direct MCA confirmation."
+    }
+  },
+  "sources": [
+    {
+      "name": "MoSPI Annual Survey of Industries Instruction Manual 2020-21",
+      "url": "https://mospi.gov.in/sites/default/files/publication_reports/ASI%2BManual%2B2020-211649844161758_0.pdf",
+      "supports": "CIN structure and the GOI, SGC, PLC, PTC, FLC, FTC, ULL, ULT, GAP, GAT and NPL ownership-code descriptions."
+    },
+    {
+      "name": "MCA Corporate Data Management Portal",
+      "url": "https://www.mcacdm.nic.in/company-master-details",
+      "supports": "Current company master data and state/territory reference names; use actual records to validate segment mappings."
+    },
+    {
+      "name": "MCA notice on new ROC locations effective 16 February 2026",
+      "url": "https://mca.gov.in/",
+      "supports": "ROC jurisdiction changes. This notice does not itself establish new CIN state-segment codes."
+    },
+    {
+      "name": "India Code — Companies Act 2013",
+      "url": "https://www.indiacode.nic.in/bitstream/123456789/2114/5/A2013-18.pdf",
+      "supports": "Legal definition of One Person Company and Section 8 / company-law terminology."
+    },
+    {
+      "name": "IIM Ahmedabad Working Paper 2026-06-01",
+      "url": "https://www.iima.ac.in/sites/default/files/2026-06/WP-2026-06-01.pdf",
+      "supports": "A 2026 MCA-data-derived example showing an OPC segment in a CIN; corroborative example, not an exhaustive code specification."
+    },
+    {
+      "name": "CS Pratik K Shah — State Codes and CIN Format Guide",
+      "url": "https://learn.cspratik.com/docs/other-resources/state-codes-cin-format/",
+      "supports": "Secondary reference for the baseline two-letter state/territory mapping. Cross-check with MCA records before production use."
+    },
+    {
+      "name": "DEV Community — October 2026 company-registration analysis",
+      "url": "https://dev.to/datadaemon/how-many-companies-were-registered-in-india-in-october-2026-17622-new-companies-by-state-type-2h9b",
+      "supports": "Secondary report of additional two-character segments associated with particular ROC offices; kept unverified and separate pending MCA confirmation."
+    }
+  ]
+}
